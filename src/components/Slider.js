@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-import Slide_1 from '../img/slide-1.jpg';
-import Slide_2 from '../img/slide-2.jpg';
-import Slide_3 from '../img/slide-3.jpg';
-import Slide_4 from '../img/slide-4.jpg';
+import Slide_1 from '../img/slide-1.png';
+import Slide_2 from '../img/slide-2.png';
+import Slide_3 from '../img/slide-3.png';
+import Slide_4 from '../img/slide-4.png';
 
 class Slider extends React.Component {
 	constructor(props){
@@ -34,7 +34,7 @@ class Slider extends React.Component {
 	}
 
 	componentDidMount(){
-		this.interval = setInteval(()=> this.intervalBetweenSlides(), 3000)
+		this.interval = setInterval(()=> this.intervalBetweenSlides(), 3000)
 	}
 	componentWillUnmount(){
 		clearInterval(this.interval)
@@ -139,7 +139,7 @@ class Slider extends React.Component {
 					<button
 						type="button"
 						className="arrows prev"
-						onClick={this.preOne}>
+						onClick={this.prevOne}>
 						<svg fill="#FFFFFF" width="50" height="50" viewBox="0 0 24 24">
 						    <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path>
 						    <path d="M0 0h24v24H0z" fill="none"></path>
@@ -155,7 +155,7 @@ class Slider extends React.Component {
 						    <path d="M0 0h24v24H0z" fill="none"></path>
 						</svg>
 					</button>
-
+				</div>	
 			)
 	}
 
